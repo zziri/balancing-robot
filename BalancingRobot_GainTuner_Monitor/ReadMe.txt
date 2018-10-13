@@ -1,3 +1,3 @@
 OScopeCtrl.cpp, OScopeCtrl.h
-this source is from
+these are from
 http://blog.daum.net/pg365/126
