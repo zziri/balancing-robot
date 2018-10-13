@@ -1,5 +1,9 @@
 // Interrupt Service Routines Source
 
+/**
+ * @author Jihoon Jang
+ */
+
 #include "stm32f4xx_hal.h"
 #include "interrupt.h"
 

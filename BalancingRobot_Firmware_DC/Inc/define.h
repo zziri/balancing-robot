@@ -1,5 +1,9 @@
 // Define Header
 
+/**
+ * @author Jihoon Jang
+ */
+
 #ifndef _DEFINE_H
 #define _DEFINE_H
 

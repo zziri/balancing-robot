@@ -1,5 +1,9 @@
 // Application Source
 
+/**
+ * @author Jihoon Jang
+ */
+
 #include "stm32f4xx_hal.h"
 #include <math.h>
 #include "i2c.h"
