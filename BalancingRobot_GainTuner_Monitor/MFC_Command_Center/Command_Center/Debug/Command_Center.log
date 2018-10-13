@@ -1,0 +1,25 @@
+﻿빌드 시작: 2018-10-10 오전 11:07:27
+     1>2 노드의 "C:\Users\DVLPR\Desktop\DVLPR\On-Going Project\Balancing Robot Project\MFC Project\MFC_Command_Center_v12 ( Stepper Encoder )\Command_Center\Command_Center.vcxproj" 프로젝트(Build 대상)입니다.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Command_Center.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Command_CenterDlg.cpp
+         Command_CenterDlg.cpp
+     1>c:\users\dvlpr\desktop\dvlpr\on-going project\balancing robot project\mfc project\mfc_command_center_v12 ( stepper encoder )\command_center\command_centerdlg.cpp(420): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 'fopen' 선언을 참조하십시오.
+     1>c:\users\dvlpr\desktop\dvlpr\on-going project\balancing robot project\mfc project\mfc_command_center_v12 ( stepper encoder )\command_center\command_centerdlg.cpp(424): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : 'fscanf' 선언을 참조하십시오.
+     1>c:\users\dvlpr\desktop\dvlpr\on-going project\balancing robot project\mfc project\mfc_command_center_v12 ( stepper encoder )\command_center\command_centerdlg.cpp(447): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 'fopen' 선언을 참조하십시오.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\DVLPR\Desktop\DVLPR\On-Going Project\Balancing Robot Project\MFC Project\MFC_Command_Center_v12 ( Stepper Encoder )\Debug\Command_Center.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\DVLPR\Desktop\DVLPR\On-Going Project\Balancing Robot Project\MFC Project\MFC_Command_Center_v12 ( Stepper Encoder )\Debug\Command_Center.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\DVLPR\Desktop\DVLPR\On-Going Project\Balancing Robot Project\MFC Project\MFC_Command_Center_v12 ( Stepper Encoder )\Debug\Command_Center.lib" /MACHINE:X86 Debug\Command_Center.res
+         Debug\ChildSocket.obj
+         Debug\Command_Center.obj
+         Debug\Command_CenterDlg.obj
+         Debug\ListenSocket.obj
+         Debug\OScopeCtrl.obj
+         Debug\stdafx.obj
+         Command_Center.vcxproj -> C:\Users\DVLPR\Desktop\DVLPR\On-Going Project\Balancing Robot Project\MFC Project\MFC_Command_Center_v12 ( Stepper Encoder )\Debug\Command_Center.exe
+     1>"C:\Users\DVLPR\Desktop\DVLPR\On-Going Project\Balancing Robot Project\MFC Project\MFC_Command_Center_v12 ( Stepper Encoder )\Command_Center\Command_Center.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:01.04
