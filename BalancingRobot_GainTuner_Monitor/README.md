@@ -1,7 +1,6 @@
 # Command Center For Balancing Robot
 <br>
 <br>
-
 ## Functions
 1. GainTuner
 
@@ -22,4 +21,4 @@
 
     - [참조링크](http://blog.daum.net/pg365/126)
 ### Screen shot
-![screenshot](./img/Dialog_img.png)
+![screenshot](../img/Dialog_img.png)
