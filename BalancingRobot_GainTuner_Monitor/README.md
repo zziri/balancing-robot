@@ -15,4 +15,4 @@
 
     - [참조링크](http://blog.daum.net/pg365/126)
 
-![screenshot](https://github.com/dvlpr-shark/Balancing-Robot/tree/master/BalancingRobot_GainTuner_Monitor/img/Dialog_img.png)
+![screenshot](./img/Dialog_img.png)
