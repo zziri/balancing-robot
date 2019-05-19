@@ -2,11 +2,15 @@
 
 ## Functions
 1. GainTuner
+
     - 원격으로 로봇 제어기의 게인을 튜닝
+
 2. Monitor
+
     - 원격으로 로봇의 상태(각도, 위치) 모니터링
 
-# Reference
+## Reference
 
 1. OScopeCtrl Class
+
     - [참조링크](http://blog.daum.net/pg365/126)
