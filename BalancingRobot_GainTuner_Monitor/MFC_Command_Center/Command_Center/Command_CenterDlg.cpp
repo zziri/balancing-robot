@@ -417,7 +417,7 @@ bool CCommand_CenterDlg::ReadGains(void)
 	FILE *pFile;
 	Gain gain;
 	// File Open
-	if(!(pFile = fopen("C:\\temp\\gain.txt", "r")))
+	if(!(pFile = fopen("gain.txt", "r")))
 		return false;
 	// Get gains
 	if((fscanf(pFile, "%lf %lf %lf %lf %lf %lf %lf", &gain.pPosture, &gain.iPosture, &gain.dPosture, 
