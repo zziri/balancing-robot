@@ -9,4 +9,4 @@
 # Reference
 
 1. OScopeCtrl Class
-    - [OScopeCtrl](http://blog.daum.net/pg365/126)
+    - [참조링크](http://blog.daum.net/pg365/126)
