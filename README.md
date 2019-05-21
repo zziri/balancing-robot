@@ -15,24 +15,40 @@
 -->
 
 # Balancing Robot
+
 <br>
 <br>
+
 # Stepper
+
 <br>
 <br>
+
 ## Overview
+
 <br>
+
 1. Inverted Pendulum mechanism
+
 <br>
+
 2. IMU Sensor
+
 <br>
+
 ## Control
 <!--
 제어 블록선도 그림
 -->
+
 <br>
+
 ## Hardware
+
 - Circuit
+
 <br>
+
 ## References
+
 <br>
