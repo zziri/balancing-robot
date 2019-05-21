@@ -1,6 +1,6 @@
 # Command Center(for Balancing robot)
 <br>
-<br> 
+
 ![](../img/Dialog_img.png)
 
 ## Functions
