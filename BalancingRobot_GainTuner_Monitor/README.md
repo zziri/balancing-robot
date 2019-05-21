@@ -22,5 +22,6 @@
 1. OScopeCtrl Class
 
     - [참조링크](http://blog.daum.net/pg365/126)
-### Screen shot
+<br>
+<!-- ### Screen shot -->
 ![](../img/Dialog_img.png)
