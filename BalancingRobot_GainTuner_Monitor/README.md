@@ -24,4 +24,4 @@
     - [참조링크](http://blog.daum.net/pg365/126)
 <br>
 <!-- ### Screen shot -->
-![](../img/Dialog_img.png)
+![ ](../img/Dialog_img.png)
