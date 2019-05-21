@@ -18,10 +18,6 @@
 <br>
 <br>
 
-# Stepper
-<br>
-<br>
-
 ## Overview
 <br>
 
