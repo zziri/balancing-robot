@@ -23,4 +23,4 @@
 
     - [참조링크](http://blog.daum.net/pg365/126)
 ### Screen shot
-![screenshot](../img/Dialog_img.png)
+![](../img/Dialog_img.png)
