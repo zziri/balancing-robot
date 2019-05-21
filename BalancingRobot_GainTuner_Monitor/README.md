@@ -20,7 +20,7 @@
 
 ## Reference
 
-1. OScopeCtrl Class
+* OScopeCtrl Class
 
     - [참조링크](http://blog.daum.net/pg365/126)
 <br>
