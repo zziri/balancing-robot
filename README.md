@@ -34,7 +34,6 @@ source : https://kocoafab.cc/make/view/719
 
 ### 2. IMU Sensor
 <br>
-
 * IMU(관성측정장비) : 가속도계, 회전 속도계, 자력계 등<br>
 
   * [IMU wikipedia](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%84%B1_%EC%B8%A1%EC%A0%95_%EC%9E%A5%EB%B9%84)
