@@ -27,9 +27,9 @@
 
 ![basic mechanism](img/br_mechanism.JPG)<br>
 source : https://kocoafab.cc/make/view/719
-
-    로봇이 기울면 모터를 움직여서 중심을 잡는다
-    이것을 위해서 로봇이 기울어진 각도를 알 수 있는 센서 필요
+* 
+    * 로봇이 기울면 모터를 움직여서 중심을 잡는다
+    * 이것을 위해서 로봇이 기울어진 각도를 알 수 있는 센서 필요
 
 2. IMU Sensor
 <br>
