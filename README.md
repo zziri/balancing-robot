@@ -27,12 +27,16 @@
 
 <img src="img/br_mechanism.JPG" width="500">
 source : https://kocoafab.cc/make/view/719
-
+<br>
 * 로봇이 기울면 모터를 움직여서 중심을 잡는다
 * 이것을 위해서 로봇이 기울어진 각도를 알 수 있는 센서 필요
 
 2. IMU Sensor
 <br>
+MPU6050
+<img src="img/br_imu_sensor.JPG" width="500">
+
+
 
 ## Control
 <!--
