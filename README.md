@@ -23,7 +23,7 @@ source : https://kocoafab.cc/make/view/719
 
 <img src="img/br_imu_sensor.JPG" width="250" title="MPU6050">
 
-* MPU6050 센서 모듈
+* MPU6050
     * 회전 속도계, 가속도계가 결합된 형태의 센서 모듈
     * I2C 통신 인터페이스 포함
 
@@ -41,11 +41,3 @@ source : https://kocoafab.cc/make/view/719
 ### Block Diagram (for Balancing Robot)
 
 <img src="img/br_control_block_diagram.JPG" width="500">
-
-## Hardware
-
-### Circuit
-<br>
-
-## References
-<br>
