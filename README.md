@@ -3,8 +3,7 @@
 <br>
 <br>
 
-## Overview
-<br>
+## Overview  
 
 ### Inverted Pendulum mechanism
 <br>
@@ -28,8 +27,7 @@ source : https://kocoafab.cc/make/view/719
 * 회전 속도계, 가속도계가 결합된 형태의 센서 모듈
 * I2C 통신 인터페이스 포함
 
-## Control
-
+## Control  
 
 ### PID Control  
 
