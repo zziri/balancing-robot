@@ -22,7 +22,7 @@
 ## Overview
 <br>
 
-![ ](./img/br_mechanism.jpg)
+![ ](img/br_mechanism.jpg)
 * source : https://kocoafab.cc/make/view/719
 
 
