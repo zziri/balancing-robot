@@ -9,7 +9,7 @@
 <br>
 
 <img src="img/br_mechanism.JPG" width="500">
-source : https://kocoafab.cc/make/view/719
+<a href="https://kocoafab.cc/make/view/719">sorce</a>
 <br><br>
 
 * 로봇이 기울면 모터를 움직여서 중심을 잡는다
@@ -22,8 +22,8 @@ source : https://kocoafab.cc/make/view/719
     [IMU wikipedia](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%84%B1_%EC%B8%A1%EC%A0%95_%EC%9E%A5%EB%B9%84)
 
 <img src="img/br_imu_sensor.JPG" width="250" title="MPU6050">
-source : <a href="https://www.makerlab-electronics.com/product/triple-axis-accelerometer-gyro-breakout-mpu6050/">mpu6050</a>
-
+<a href="https://www.makerlab-electronics.com/product/triple-axis-accelerometer-gyro-breakout-mpu6050/">source</a>
+<br>
 * MPU6050
     * 회전 속도계, 가속도계가 결합된 형태의 센서 모듈
     * I2C 통신 인터페이스 포함
