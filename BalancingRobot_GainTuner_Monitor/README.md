@@ -1,8 +1,7 @@
 # Command Center (for Balancing robot)
 <br>
 
-<!-- ![](../img/Dialog_img.png) -->
-<img src="../img/Dialog_img.png" width="700">
+![](../img/Dialog_img.png)
 
 ## Functions
 
