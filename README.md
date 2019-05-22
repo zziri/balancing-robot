@@ -22,7 +22,8 @@
 ## Overview
 <br>
 
-![* source : https://kocoafab.cc/make/view/719](img/br_mechanism.JPG)
+![basic mechanism](img/br_mechanism.JPG)
+source : https://kocoafab.cc/make/view/719
 
 1. Inverted Pendulum mechanism
 <br>
