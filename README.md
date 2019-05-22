@@ -25,7 +25,7 @@
 1. Inverted Pendulum mechanism
 <br>
 
-<img src="img/br_mechanism.JPG" size=50%>
+<img src="img/br_mechanism.JPG" width="300">
 source : https://kocoafab.cc/make/view/719
 
 * 로봇이 기울면 모터를 움직여서 중심을 잡는다
