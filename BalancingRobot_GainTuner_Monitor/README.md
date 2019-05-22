@@ -1,7 +1,8 @@
 # Command Center (for Balancing robot)
 <br>
 
-![](../img/Dialog_img.png)
+<!-- ![](../img/Dialog_img.png) -->
+<img src="../img/Dialog_img.png" width="700">
 
 ## Functions
 
@@ -16,7 +17,7 @@
 ### 3. Remote-Controller
 
 * 원격으로 로봇의 전진, 후진 주행과 시계, 반시계방향 회전 주행
-    * 키보드의 화살표 키만 지원, 마우스로는 불가
+    * 키보드의 화살표 키만 지원
 
 ## Reference
 
