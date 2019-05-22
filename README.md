@@ -1,3 +1,4 @@
+
 <!--
 추가해야 할 것
 1. 밸런싱 로봇 개요
@@ -20,6 +21,10 @@
 
 ## Overview
 <br>
+
+![ ](../img/br_mechanism.jpg)
+* source : https://kocoafab.cc/make/view/719
+
 
 1. Inverted Pendulum mechanism
 <br>
