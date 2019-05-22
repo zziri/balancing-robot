@@ -20,7 +20,7 @@ source : https://kocoafab.cc/make/view/719
 
 * IMU(관성측정장비) : 가속도계, 회전 속도계, 자력계 등
 
-  * [IMU wikipedia](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%84%B1_%EC%B8%A1%EC%A0%95_%EC%9E%A5%EB%B9%84)
+      [IMU wikipedia](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%84%B1_%EC%B8%A1%EC%A0%95_%EC%9E%A5%EB%B9%84)
 
 <!-- MPU6050<br> -->
 <img src="img/br_imu_sensor.JPG" width="250" title="MPU6050">
@@ -38,7 +38,7 @@ source : https://kocoafab.cc/make/view/719
     * 적분항 : 오차값 크기를 적분하여 제어작용, 정상상태 오차를 줄이는 역할
     * 미분항 : 출력값의 급격한 변화를 줄여 오버슈트를 줄이고 안정성 향상
 
-    [PID Cotnrol wikipedia](https://ko.wikipedia.org/wiki/PID_%EC%A0%9C%EC%96%B4%EA%B8%B0)
+      [PID Cotnrol wikipedia](https://ko.wikipedia.org/wiki/PID_%EC%A0%9C%EC%96%B4%EA%B8%B0)
 
 ### Block Diagram (for Balancing Robot)
 
