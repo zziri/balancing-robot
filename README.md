@@ -39,7 +39,7 @@ source : https://kocoafab.cc/make/view/719
 
   * [IMU wikipedia](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%84%B1_%EC%B8%A1%EC%A0%95_%EC%9E%A5%EB%B9%84)
 
-MPU6050
+MPU6050<br>
 <img src="img/br_imu_sensor.JPG" width="250">
 
 *
