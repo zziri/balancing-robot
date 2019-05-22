@@ -28,12 +28,15 @@
 <img src="img/br_mechanism.JPG" width="500">
 source : https://kocoafab.cc/make/view/719
 <br>
+
 * 로봇이 기울면 모터를 움직여서 중심을 잡는다
 * 이것을 위해서 로봇이 기울어진 각도를 알 수 있는 센서 필요
 
 2. IMU Sensor
 <br>
-* IMU(관성측정장비) : 가속도계, 회전 속도계, 자력계 등  [IMU wikipedia](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%84%B1_%EC%B8%A1%EC%A0%95_%EC%9E%A5%EB%B9%84)
+* IMU(관성측정장비) : 가속도계, 회전 속도계, 자력계 등<br>
+
+[IMU wikipedia](https://ko.wikipedia.org/wiki/%EA%B4%80%EC%84%B1_%EC%B8%A1%EC%A0%95_%EC%9E%A5%EB%B9%84)
 
 MPU6050
 <img src="img/br_imu_sensor.JPG" width="250">
