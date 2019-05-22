@@ -17,7 +17,6 @@ source : https://kocoafab.cc/make/view/719
 * 이것을 위해서 로봇이 기울어진 각도를 알 수 있는 센서 필요
 
 ### IMU Sensor
-<br>
 
 * IMU(관성측정장비) : 가속도계, 회전 속도계, 자력계 등
 
