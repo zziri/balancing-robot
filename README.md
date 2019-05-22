@@ -25,8 +25,8 @@ source : https://kocoafab.cc/make/view/719
 * MPU6050
 <img src="img/br_imu_sensor.JPG" width="250" title="MPU6050">
 
-* 회전 속도계, 가속도계가 결합된 형태의 센서 모듈
-* I2C 통신 인터페이스 포함
+    * 회전 속도계, 가속도계가 결합된 형태의 센서 모듈
+    * I2C 통신 인터페이스 포함
 
 ## Control  
 
