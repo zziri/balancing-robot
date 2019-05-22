@@ -22,17 +22,17 @@
 ## Overview
 <br>
 
-1. Inverted Pendulum mechanism
+### 1. Inverted Pendulum mechanism
 <br>
 
 <img src="img/br_mechanism.JPG" width="500">
 source : https://kocoafab.cc/make/view/719
-<br>
+<br><br>
 
 * 로봇이 기울면 모터를 움직여서 중심을 잡는다
 * 이것을 위해서 로봇이 기울어진 각도를 알 수 있는 센서 필요
 
-2. IMU Sensor
+### 2. IMU Sensor
 <br>
 
 * IMU(관성측정장비) : 가속도계, 회전 속도계, 자력계 등<br>
