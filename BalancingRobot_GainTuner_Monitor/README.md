@@ -1,3 +1,4 @@
+
 # Command Center (for Balancing robot)
 <br>
 
@@ -20,7 +21,9 @@
 
 ## Reference
 
-* OScopeCtrl Class
+* <a href="http://blog.daum.net/pg365/126">OScopeCtrl Class</a>
 
-    * [참조링크](http://blog.daum.net/pg365/126)
+<!-- * OScopeCtrl Class
+
+    * [참조링크](http://blog.daum.net/pg365/126) -->
 <br>
