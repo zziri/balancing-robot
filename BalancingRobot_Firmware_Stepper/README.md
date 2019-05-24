@@ -42,7 +42,7 @@ Left Header and Right Header are connected to CN7 and CN10 respectively
 
 #### Driver  
 
-* DRV8825
+* Used **DRV8825**
 <img src="../img/br_drv8825.JPG" width="200">
 
 * <a href="http://www.ti.com/lit/ds/symlink/drv8825.pdf"> DRV8825 Datasheet</a>
@@ -51,14 +51,17 @@ Left Header and Right Header are connected to CN7 and CN10 respectively
 
 ### WiFi  
 
-WizFi210 사용
-그림 넣기
+* Used **WizFi210**
+
+<img src="../img/br_wizfi210.JPG" width="200">
+
+* <a href="https://www.wiznet.io/wp-content/uploads/wiznethome/WiFi%20Module/WizFi_210_220/Document/WizFi210_DS_V120E.pdf">WizFi210 Datasheet</a>
 
 ## Software  
 
 ### Control algorithm  
 
-* main function in the **app.c** file
+* functions in the **app.c** file
 
 ```
 void PostureControl(void)
@@ -67,19 +70,18 @@ void PostureControl(void)
 }
 ```
 
-
-<pre><code>
+```
 void CentroidControl(void)
 {
   // this function is pid controller for centroid control
 }
-</code></pre>
+```
 
 * these are called from **timer period elapsed callback**
 * in the **interrupt.c** file
 * TIM2 frequency = 1KHz
 
-<pre><code>
+```
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
   /*... codes ...*/
@@ -96,14 +98,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 	}
   /*... codes ...*/
 }
-</code></pre>
+```
 
 ### Motor drive task  
 
 * **timer period elapsed callback** in the **interrupt.c** file
 * TIM3 frequency = 50KHz
 
-<pre><code>
+```
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
 	if(htim->Instance == TIM3){
@@ -112,15 +114,25 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 
   /*... codes ...*/
 }
-</code></pre>
+```
 
 ### Complementary filter algorithm
 
-app.c의 getangle함수에 있음
-코드 넣기
+* in the **app.c** file
+* Filtered Angle = α × (Gyroscope Angle) + (1 − α) × (Accelerometer Angle) α = τ/(τ + Δt)
+  * (Gyroscope Angle) = (Last Measured Filtered Angle) + ω×Δt
+    * <a href="https://alnova2.tistory.com/1085">reference</a>
 
-## References
 
-<a href="">상보필터 출처</a>
-데이터 시트 링크
-프로그래밍 메뉴얼 링크
+```
+void GET_ANGLE(void)
+{
+  /*... codes ...*/
+
+  else if(!(flag.set_angle_offset)){
+		gotAngle = A*(gotAngle + gyroXrate*timePass) + (1 - A)*accXangle;   /* Complementary Filter */
+  }
+
+  /*... codes ...*/
+}
+```
