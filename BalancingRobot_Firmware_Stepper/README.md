@@ -9,7 +9,7 @@
 
 * MCU, WizFi210(WiFi Module), MPU6050(IMU Sensor) and various connectors are connected  
 
-<img src="../img/br_circuit_io_board.JPG" width="500">
+<img src="../img/br_circuit_io_board.JPG" width="800">
 
 Left Header and Right Header are connected to CN7 and CN10 respectively  
 
@@ -17,14 +17,14 @@ Left Header and Right Header are connected to CN7 and CN10 respectively
 
 * DRV8825(Stepper Driver) and various connectors are connected  
 
-<img src="../img/br_circuit_motor_driver_board.JPG" width="500">
+<img src="../img/br_circuit_motor_driver_board.JPG" width="800">
 <br><br>
 
 ### MCU  
 
 * Used **NUCLEO-F411RE** Board
 
-<img src="../img/br_mcu.JPG" width="200"><br>
+<img src="../img/br_mcu.JPG" width="300"><br>
 
 * <a href="https://www.st.com/resource/en/datasheet/stm32f411re.pdf">STM32F411RE Datasheet</a>
 
