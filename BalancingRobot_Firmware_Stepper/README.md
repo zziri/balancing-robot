@@ -5,39 +5,49 @@
 
 ### Circuit
 
+#### I/O Board Circuit  
+
+* MCU, WizFi210(WiFi Module), MPU6050(IMU Sensor) and various connectors are connected  
+
 <img src="../img/br_circuit_io_board.JPG" width="500">
+
+Left Header and Right Header are connected to CN7 and CN10 respectively  
+
+#### Motor Driver Board  
+
+* DRV8825(Stepper Driver) and various connectors are connected  
+
 <img src="../img/br_circuit_motor_driver_board.JPG" width="500">
 <br><br>
 
-각 두 개의 보드로 설계하고 제작했습니다. Balancing_HW_v3(I/O Board)의 Left, Right Header는 NUCLEO-F411RE 보드에서 각각 CN7, CN10에 연결되는 부분을 의미합니다.
-
 ### MCU  
 
-STM32 기반의 NUCLEO-F411RE 보드를 사용했습니다.
+* Used **NUCLEO-F411RE** Board
 
-NUCLEO-F411RE
-<img src="../img/br_mcu.JPG" width="200">
-개발환경은 Keil uVision5(MDK-ARM V5)을 사용하여 프로젝트를 빌드하고 타겟 보드(NUCLEO-F411RE)에 다운로드했습니다.
+<img src="../img/br_mcu.JPG" width="200"><br>
+
+* <a href="https://www.st.com/resource/en/datasheet/stm32f411re.pdf">STM32F411RE Datasheet</a>
+
+* IDE : <a href="http://www2.keil.com/mdk5/uvision/">Keil uVision5</a>
 
 ### IMU  
 
-로봇의 각도를 측정하기 위함
-
-#### MPU6050  
-
-결선된 그림 넣기
-I2C 통신을 활용, 각도 계산
+* <a href="https://github.com/dvlpr-shark/Balancing-Robot#imu-sensor">IMU Sensor</a>
 
 ### Motor  
 
 #### Stepper  
 
-사용한 스테퍼 모터 그림
+* <a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%85%8C%ED%8D%BC%EB%AA%A8%ED%84%B0">Stepper Motor wikipedia</a>
 
 #### Driver  
 
-DRV8825
-그림 넣기
+* DRV8825
+<img src="../img/br_drv8825.JPG" width="200">
+
+* <a href="http://www.ti.com/lit/ds/symlink/drv8825.pdf"> DRV8825 Datasheet</a>
+
+* <a href="http://www.hobbytronics.co.uk/drv8825-stepper-motor-driver">Wiring Diagram</a>
 
 ### WiFi  
 
@@ -48,9 +58,33 @@ WizFi210 사용
 
 ### Control algorithm  
 
-app.c 파일에 있음
+* app.c
 <pre><code>
-코드넣기
+// PID Posture Control
+void PostureControl(void)
+{
+	static double preinput = 0.0;
+	double input = centroid.control.result - angleResult;
+
+	if(flag.restart_control)																																		/*if restart control*/
+		preinput = 0.0, flag.restart_control = 0;																									/*clear preinput*/
+
+	posture.control.p = posture.gain.p * input;																									/*Proportional control*/
+	posture.control.i += posture.gain.i * input;																								/*Integral control*/
+	if(posture.control.i > MAX_SPEED - MARGIN){																									/*Limit max output*/
+		if(posture.control.i > 0)	posture.control.i = MAX_SPEED - MARGIN;
+		else	posture.control.i = -MAX_SPEED - MARGIN;
+	}
+	posture.control.d = posture.gain.d * (input - preinput);																		/*Differential control*/
+	posture.control.result = posture.control.p + posture.control.i + posture.control.d;					/*Sum PID Controller Result signal*/
+
+	if(posture.control.result > MAX_SPEED - MARGIN){																						/*Limit max output*/
+		if(posture.control.result > 0)	posture.control.i = MAX_SPEED - MARGIN;
+		else	posture.control.result = -MAX_SPEED - MARGIN;
+	}
+
+	preinput = input;																																						/*renew preinput*/
+}
 </code></pre>
 
 interrupt.c 파일의 timer 콜백함수에서 호출됨
