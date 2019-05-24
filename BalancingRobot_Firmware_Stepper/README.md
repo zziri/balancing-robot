@@ -122,7 +122,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
   * <a href="https://alnova2.tistory.com/1085">Reference</a>
 
 ```
-Filtered Angle = α × (Gyroscope Angle) + (1 − α) × (Accelerometer Angle) α = τ/(τ + Δt)
+Filtered Angle = α × (Gyroscope Angle) + (1 − α) × (Accelerometer Angle)
+
+α = τ/(τ + Δt)
 
 (Gyroscope Angle) = (Last Measured Filtered Angle) + ω×Δt  
 
