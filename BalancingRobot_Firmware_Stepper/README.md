@@ -18,7 +18,7 @@ Left Header and Right Header are connected to CN7 and CN10(NUCLEO-F411RE Morpho 
 * DRV8825(Stepper Driver) and various connectors are connected  
 
 <img src="../img/br_circuit_motor_driver_board.JPG" width="800">
-<br><br>
+<br>s
 
 ### MCU  
 
