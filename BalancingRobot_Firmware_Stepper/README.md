@@ -58,42 +58,59 @@ WizFi210 사용
 
 ### Control algorithm  
 
-* app.c
+* main function in the **app.c** file
 <pre><code>
-// PID Posture Control
 void PostureControl(void)
 {
-	static double preinput = 0.0;
-	double input = centroid.control.result - angleResult;
-
-	if(flag.restart_control)																																		/*if restart control*/
-		preinput = 0.0, flag.restart_control = 0;																									/*clear preinput*/
-
-	posture.control.p = posture.gain.p * input;																									/*Proportional control*/
-	posture.control.i += posture.gain.i * input;																								/*Integral control*/
-	if(posture.control.i > MAX_SPEED - MARGIN){																									/*Limit max output*/
-		if(posture.control.i > 0)	posture.control.i = MAX_SPEED - MARGIN;
-		else	posture.control.i = -MAX_SPEED - MARGIN;
-	}
-	posture.control.d = posture.gain.d * (input - preinput);																		/*Differential control*/
-	posture.control.result = posture.control.p + posture.control.i + posture.control.d;					/*Sum PID Controller Result signal*/
-
-	if(posture.control.result > MAX_SPEED - MARGIN){																						/*Limit max output*/
-		if(posture.control.result > 0)	posture.control.i = MAX_SPEED - MARGIN;
-		else	posture.control.result = -MAX_SPEED - MARGIN;
-	}
-
-	preinput = input;																																						/*renew preinput*/
+  // this function is pid controller for posture control
 }
 </code></pre>
 
-interrupt.c 파일의 timer 콜백함수에서 호출됨
-코드 넣기
+<pre><code>
+void CentroidControl(void)
+{
+  // this function is pid controller for centroid control
+}
+</code></pre>
+
+* these are called from **timer period elapsed callback**
+* in the **interrupt.c** file
+* TIM2 frequency = 1KHz
+
+<pre><code>
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
+{
+  /*... codes ...*/
+  else if(htim->Instance == TIM2){
+		/*... codes ...*/
+
+		PostureControl();
+
+		/*... codes ...*/
+
+		CentroidControl();
+
+		/*... codes ...*/
+	}
+  /*... codes ...*/
+}
+</code></pre>
 
 ### Motor drive task  
 
-interrupt.c 파일의 timer 콜백 함수에 있음
-코드 넣기
+* **timer period elapsed callback** in the **interrupt.c** file
+* TIM3 frequency = 50KHz
+
+<pre><code>
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
+{
+	if(htim->Instance == TIM3){
+		// motor drive task ...
+  }
+
+  /*... codes ...*/
+}
+</code></pre>
 
 ### Complementary filter algorithm
 
