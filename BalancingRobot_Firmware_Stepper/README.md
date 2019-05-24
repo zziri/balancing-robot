@@ -86,15 +86,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
   /*... codes ...*/
   else if(htim->Instance == TIM2){
-		/*... codes ...*/
+    /*... codes ...*/
 
-		PostureControl();
+    PostureControl();
 
-		/*... codes ...*/
+    /*... codes ...*/
 
-		CentroidControl();
+    CentroidControl();
 
-		/*... codes ...*/
+    /*... codes ...*/
   }
   /*... codes ...*/
 }
@@ -120,10 +120,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 
 * Algorithm
   * <a href="https://alnova2.tistory.com/1085">Reference</a>
-  
+
 ```
 Filtered Angle = α × (Gyroscope Angle) + (1 − α) × (Accelerometer Angle) α = τ/(τ + Δt)
+
 (Gyroscope Angle) = (Last Measured Filtered Angle) + ω×Δt  
+
 Δt = sampling rate, τ = time constant greater than timescale of typical accelerometer noise
 ```
 
@@ -135,7 +137,7 @@ void GET_ANGLE(void)
   /*... codes ...*/
 
   else if(!(flag.set_angle_offset)){
-		gotAngle = A*(gotAngle + gyroXrate*timePass) + (1 - A)*accXangle;   /* Complementary Filter */
+    gotAngle = A*(gotAngle + gyroXrate*timePass) + (1 - A)*accXangle;   /* Complementary Filter */
   }
 
   /*... codes ...*/
