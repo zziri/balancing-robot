@@ -111,18 +111,23 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
   if(htim->Instance == TIM3){
     // motor drive task ...
   }
-  
+
   /*... codes ...*/
 }
 ```
 
 ### Complementary filter algorithm
 
-* in the **app.c** file
-* Filtered Angle = α × (Gyroscope Angle) + (1 − α) × (Accelerometer Angle) α = τ/(τ + Δt)
-  * (Gyroscope Angle) = (Last Measured Filtered Angle) + ω×Δt
-    * <a href="https://alnova2.tistory.com/1085">reference</a>
+* Algorithm
+  * <a href="https://alnova2.tistory.com/1085">Reference</a>
+  
+```
+Filtered Angle = α × (Gyroscope Angle) + (1 − α) × (Accelerometer Angle) α = τ/(τ + Δt)
+(Gyroscope Angle) = (Last Measured Filtered Angle) + ω×Δt  
+Δt = sampling rate, τ = time constant greater than timescale of typical accelerometer noise
+```
 
+* in the **app.c** file
 
 ```
 void GET_ANGLE(void)
