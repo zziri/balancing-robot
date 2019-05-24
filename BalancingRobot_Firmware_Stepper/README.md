@@ -59,12 +59,14 @@ WizFi210 사용
 ### Control algorithm  
 
 * main function in the **app.c** file
-<pre><code>
+
+```
 void PostureControl(void)
 {
   // this function is pid controller for posture control
 }
-</code></pre>
+```
+
 
 <pre><code>
 void CentroidControl(void)
