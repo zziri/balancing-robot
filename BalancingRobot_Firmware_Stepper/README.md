@@ -108,10 +108,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 ```
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
-	if(htim->Instance == TIM3){
-		// motor drive task ...
+  if(htim->Instance == TIM3){
+    // motor drive task ...
   }
-
+  
   /*... codes ...*/
 }
 ```
