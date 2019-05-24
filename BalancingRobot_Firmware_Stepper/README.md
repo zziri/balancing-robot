@@ -11,7 +11,7 @@
 
 <img src="../img/br_circuit_io_board.JPG" width="800">
 
-Left Header and Right Header are connected to CN7 and CN10 respectively  
+Left Header and Right Header are connected to CN7 and CN10(NUCLEO-F411RE Morpho headers) respectively  
 
 #### Motor Driver Board  
 
@@ -24,7 +24,7 @@ Left Header and Right Header are connected to CN7 and CN10 respectively
 
 * Used **NUCLEO-F411RE** Board
 
-<img src="../img/br_mcu.JPG" width="300"><br>
+<img src="../img/br_mcu.JPG" width="250"><br>
 
 * <a href="https://www.st.com/resource/en/datasheet/stm32f411re.pdf">STM32F411RE Datasheet</a>
 
