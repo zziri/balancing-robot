@@ -42,6 +42,6 @@
 
       [PID Cotnrol wikipedia](https://ko.wikipedia.org/wiki/PID_%EC%A0%9C%EC%96%B4%EA%B8%B0)
 
-### Block Diagram (for Balancing Robot)
+### Block Diagram  
 
-<img src="img/br_control_block_diagram.JPG" width="500">
+<img src="img/br_control_block_diagram.JPG" width = "800">
