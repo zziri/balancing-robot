@@ -44,4 +44,4 @@
 
 ### Block Diagram  
 
-<img src="img/br_control_block_diagram.JPG" width = "800">
+<img src="img/br_control_block_diagram.JPG" width = "700">
