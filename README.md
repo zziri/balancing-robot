@@ -35,6 +35,8 @@
 
 # Balancing Robot (Stepper-Motor)  
 
+로봇을 제어하는 하드웨어와 소프트웨어입니다  
+
 ## Hardware  
 
 ### Circuit
@@ -177,9 +179,11 @@ void GET_ANGLE(void)
 }
 ```
 
-# Gain Tuner  
+# Controller Tuner  
 
-![](../img/Dialog_img.png)
+로봇의 상태를 모니터링하면서 제어기를 튜닝할 수 있는 윈도우 앱입니다  
+
+![](img/Dialog_img.png)
 
 ## Functions  
 
