@@ -9,7 +9,7 @@
 
 * MCU, WizFi210(WiFi Module), MPU6050(IMU Sensor) and various connectors are connected  
 
-<img src="../img/br_circuit_io_board.JPG" width="800">
+<img src="../../img/br_circuit_io_board.JPG" width="800">
 
 Left Header and Right Header are connected to CN7 and CN10(NUCLEO-F411RE Morpho headers) respectively  
 
@@ -17,14 +17,14 @@ Left Header and Right Header are connected to CN7 and CN10(NUCLEO-F411RE Morpho 
 
 * DRV8825(Stepper Driver) and various connectors are connected  
 
-<img src="../img/br_circuit_motor_driver_board.JPG" width="800">
+<img src="../../img/br_circuit_motor_driver_board.JPG" width="800">
 <br>
 
 ### MCU  
 
 * Used **NUCLEO-F411RE** Board
 
-<img src="../img/br_mcu.JPG" width="250"><br>
+<img src="../../img/br_mcu.JPG" width="250"><br>
 
 * <a href="https://www.st.com/resource/en/datasheet/stm32f411re.pdf">STM32F411RE Datasheet</a>
 
@@ -43,7 +43,7 @@ Left Header and Right Header are connected to CN7 and CN10(NUCLEO-F411RE Morpho 
 #### Driver  
 
 * Used **DRV8825**
-<img src="../img/br_drv8825.JPG" width="200">
+<img src="../../img/br_drv8825.JPG" width="200">
 
 * <a href="http://www.ti.com/lit/ds/symlink/drv8825.pdf"> DRV8825 Datasheet</a>
 
@@ -53,7 +53,7 @@ Left Header and Right Header are connected to CN7 and CN10(NUCLEO-F411RE Morpho 
 
 * Used **WizFi210**
 
-<img src="../img/br_wizfi210.JPG" width="200">
+<img src="../../img/br_wizfi210.JPG" width="200">
 
 * <a href="https://www.wiznet.io/wp-content/uploads/wiznethome/WiFi%20Module/WizFi_210_220/Document/WizFi210_DS_V120E.pdf">WizFi210 Datasheet</a>
 
