@@ -1,7 +1,7 @@
 
 # Overview  
 
-도립 진자 형태의 로봇을 제어하는 프로젝트입니다  
+도립 진자 형태의 모바일 로봇을 제어하는 프로젝트입니다  
 
 ## Inverted Pendulum mechanism  
 
