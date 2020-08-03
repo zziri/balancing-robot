@@ -60,8 +60,6 @@ void CListenSocket::CloseClientSocket(CSocket* pChild)
 
 void CListenSocket::BroadCast(PC2MCU* pszBuffer, int len)
 {
-	//if(pszBuffer->command == 'C')	// 'C' mean Callback
-	//	return;
 	if(pDlg->isCanSend){
 		POSITION pos;
 		pos = ChildSocket_List.GetHeadPosition();

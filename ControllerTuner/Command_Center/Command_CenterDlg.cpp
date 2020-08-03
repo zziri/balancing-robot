@@ -146,7 +146,6 @@ BOOL CCommand_CenterDlg::OnInitDialog()
 
 	// Configuration Graph
 	GraphConfiguration();
-	//SetTimer(TIM_ID_GRAPH, 1, NULL);						/* OnReceive에서 대신 처리 */
 	// Edit Control Init
 	SetTimer(TIM_RECEIVE, 1, NULL);
 	m_speed_cmd = DEFAULT_DRIVE_SPEED;
@@ -270,14 +269,6 @@ void CCommand_CenterDlg::OnOK()
 void CCommand_CenterDlg::OnTimer(UINT_PTR nIDEvent)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
-	//if(nIDEvent == TIM_ID_GRAPH){
-	//	double t = (double)GetTickCount()/1000.0;
-	//	double value[3] = {5.0*cos(t), 5.0*sin(t), 5.0*tan(t) };
-	//	pGraph_Angle->AppendPoints(value);
-	//}
-	//else if(nIDEvent == TIM_ID_DRAW_GRAPH){
-	//	pListenSocket->pChildSocket->Append2Graph();
-	//}
 	if(nIDEvent == TIM_RECEIVE){				// 로봇에서 어떤 메세지 도착한것을 처리
 		if(!q.empty()){
 			CString temp;
@@ -317,10 +308,6 @@ void CCommand_CenterDlg::OnTimer(UINT_PTR nIDEvent)
 			else if(mcu2pc.command == 0x00){
 				double value[3] = {mcu2pc.monitoring.angle, 
 					mcu2pc.monitoring.encoder.left, mcu2pc.monitoring.encoder.right};
-				//for(int i=0; i<3; i++){
-				//	pGraph_Angle->AppendPoints(value);								/* 같은 점을 두개 추가 */
-				//	pGraph_Encoder->AppendPoints(value+1);							/* 그래프가 빠르게 지나가도록 */
-				//}
 				pGraph_Angle->AppendPoints(value);
 				pGraph_Encoder->AppendPoints(value+1);
 				pGraph_Angle->AppendPoints(value);

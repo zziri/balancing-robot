@@ -74,7 +74,6 @@ public:
 	virtual void OnClose(int nErrorCode);
 	virtual void OnReceive(int nErrorCode);
 	CCommand_CenterDlg* pDlg;
-	static UINT Thread_AppendPoints(LPVOID pParam);
 	MCU2PC mcu2pc;
 	queue<MCU2PC> q;
 	void Append2Graph(void);
