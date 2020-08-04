@@ -185,20 +185,25 @@ void GET_ANGLE(void)
 
 ![](img/Dialog_img.png)
 
-## Functions  
+## 구현 방법  
 
-### GainTuner  
+### Gain tuning  
 
-* 원격으로 로봇 제어기의 게인을 튜닝
+1. 로봇의 WiFi Module(WizFi210)과 `Controller Tuner` 간의 socket 통신으로 원격 튜닝을 구현합니다  
+1. 두 제어기(Block Diagram 참고)의 gain을 튜닝하기 위해서 Dialog로부터 입력되는 각 gain 값을 struct에 담아 BroadCast() 합니다  
+``` c++
+typedef struct Gain
+{
+	double pPosture;
+	// variables ...
+}Gain;
+```
+1. WiFi Module은 `Controller Tuner`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
 
-### Monitor  
+### Driving  
 
-* 원격으로 로봇의 상태(각도, 위치) 모니터링
 
-### Remote-Controller  
 
-* 원격으로 로봇의 전진, 후진 주행과 시계, 반시계방향 회전 주행
-    * 키보드의 화살표 키만 지원
 
 # Reference  
 
