@@ -194,10 +194,34 @@ void GET_ANGLE(void)
 ``` c++
 typedef struct Gain
 {
-	double pPosture;
 	// variables ...
 }Gain;
-```
+```  
+
+``` c++
+void CCommand_CenterDlg::OnBnClickedButtonSend()
+{
+  // pc2mcu 구조체 변수의 각 멤버 세팅
+  pListenSocket->BroadCast(&pc2mcu, sizeof(pc2mcu));
+  // codes ...
+}
+```  
+
+``` c++
+void CListenSocket::BroadCast(PC2MCU* pszBuffer, int len)
+{
+	if(pDlg->isCanSend){
+		POSITION pos = ChildSocket_List.GetHeadPosition();
+		CChildSocket* pChild = NULL;
+		while(pos != NULL){
+			pChild = (CChildSocket*)ChildSocket_List.GetNext(pos);
+			if(pChild != NULL)
+				pChild->Send(pszBuffer, len);
+		}
+		pDlg->isCanSend = false;
+	}
+}
+```  
 1. WiFi Module은 `Controller Tuner`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
 
 ### Driving  
