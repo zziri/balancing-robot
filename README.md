@@ -222,7 +222,7 @@ void CListenSocket::BroadCast(PC2MCU* pszBuffer, int len)
 	}
 }
 ```  
-1. WiFi Module은 `Controller Tuner`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
+3. WiFi Module은 `Controller Tuner`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
 
 ### Driving  
 
