@@ -1,4 +1,5 @@
 
 ControllerTuner/*.sdf
 ControllerTuner/*.opensdf
-
+ControllerTuner/Command_Center/Debug/*
+ControllerTuner/Debug/*
