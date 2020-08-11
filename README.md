@@ -97,31 +97,30 @@ Left Header and Right Header are connected to CN7 and CN10(NUCLEO-F411RE Morpho 
 
 ### Control algorithm  
 
-* functions in the **app.c** file
-
 ``` c
+// in the app.c
 void PostureControl(void)
 {
-  // this function is pid controller for posture control
+  // 자세 제어를 위한 PID 제어기입니다
 }
 ```
 
 ``` c
+// in the app.c
 void CentroidControl(void)
 {
-  // this function is pid controller for centroid control
+  // 무게중심 제어를 위한 PID 제어기입니다
 }
 ```
 
-* these are called from **timer period elapsed callback**
-* in the **interrupt.c** file
-* TIM2 frequency = 1KHz
+위 함수들은 **timer period elapsed callback**에서 호출됩니다  
 
 ``` c
+// in the interrupt.c
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
   /*... codes ...*/
-  else if(htim->Instance == TIM2){
+  else if(htim->Instance == TIM2){    // TIM2 frequency = 1KHz
     /*... codes ...*/
 
     PostureControl();
@@ -138,13 +137,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 
 ### Motor drive task  
 
-* **timer period elapsed callback** in the **interrupt.c** file
-* TIM3 frequency = 50KHz
-
 ``` c
+// in the interrupt.c
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
-  if(htim->Instance == TIM3){
+  if(htim->Instance == TIM3){       // TIM3 frequency = 50KHz
     // motor drive task ...
   }
 
@@ -164,9 +161,8 @@ Filtered Angle = α × (Gyroscope Angle) + (1 − α) × (Accelerometer Angle)
 Δt = sampling rate, τ = time constant greater than timescale of typical accelerometer noise
 ```
 
-* in the **app.c** file
-
 ``` c
+// in the app.c
 void GET_ANGLE(void)
 {
   /*... codes ...*/
@@ -189,7 +185,7 @@ void GET_ANGLE(void)
 
 ### Gain tuning  
 
-1. 로봇의 WiFi Module(WizFi210)과 `Controller Tuner` 간의 socket 통신으로 원격 튜닝을 구현합니다  
+1. 로봇의 WiFi Module(WizFi210)과 `ControllerTuner` 간의 socket 통신으로 원격 튜닝을 구현합니다  
 1. 두 제어기(Block Diagram 참고)의 gain을 튜닝하기 위해서 Dialog로부터 입력되는 각 gain 값을 struct에 담아 BroadCast() 합니다  
 ``` c++
 typedef struct Gain
@@ -222,9 +218,50 @@ void CListenSocket::BroadCast(PC2MCU* pszBuffer, int len)
 	}
 }
 ```  
-3. WiFi Module은 `Controller Tuner`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
+3. WiFi Module은 `ControllerTuner`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
+
+``` c
+void Tuning(void)
+{
+	// Gain 값 세팅
+}
+```  
 
 ### Driving  
+
+1. 키보드의 방향키를 누르면 `ControllerTuner` 그에 따른 이벤트를 처리합니다  
+``` c++
+BOOL CCommand_CenterDlg::PreTranslateMessage(MSG* pMsg)
+{
+
+}
+```  
+
+2. 어떤 키가 눌렸는지 여부를 체크섬과 함께 로봇에 전송합니다  
+
+``` c++
+void CCommand_CenterDlg::DriveCommand(char dir)
+{
+	memset(&pc2mcu, 0, sizeof(pc2mcu));
+	pc2mcu.drive.dir = dir;
+	UpdateData(TRUE), pc2mcu.drive.speed = (short)((int)((long)m_speed_cmd));
+	CreateCheckSum_PC2MCU();
+	pListenSocket->BroadCast(&pc2mcu, sizeof(pc2mcu));
+}
+```  
+
+``` c++
+void CCommand_CenterDlg::CreateCheckSum_PC2MCU(void)
+{
+	char* ptr = (char*)(&pc2mcu);
+	int temp = (int)NULL;
+	for(int i=1; i<sizeof(pc2mcu); i++){
+		temp += ptr[i];								/* 모두 더하기 */
+		temp &= 0x000000FF;							/* 8비트만 마스킹 */
+	}
+	pc2mcu.checksum = (char)temp;
+}
+```  
 
 
 
