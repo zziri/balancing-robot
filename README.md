@@ -197,9 +197,9 @@ typedef struct Gain
 ``` c++
 void CCommand_CenterDlg::OnBnClickedButtonSend()
 {
-  // pc2mcu 구조체 변수의 각 멤버 세팅
-  pListenSocket->BroadCast(&pc2mcu, sizeof(pc2mcu));
-  // codes ...
+	// pc2mcu 구조체 변수의 각 멤버 세팅
+	pListenSocket->BroadCast(&pc2mcu, sizeof(pc2mcu));
+	// codes ...
 }
 ```  
 
@@ -233,7 +233,7 @@ void Tuning(void)
 ``` c++
 BOOL CCommand_CenterDlg::PreTranslateMessage(MSG* pMsg)
 {
-  if(pMsg->message == WM_KEYDOWN){
+	if(pMsg->message == WM_KEYDOWN){
 		if(!CheckDriveClicked()){
 			SetDriveClicked(WM_KEYDOWN);
 			switch (pMsg->wParam)
@@ -249,7 +249,7 @@ BOOL CCommand_CenterDlg::PreTranslateMessage(MSG* pMsg)
 	else if(pMsg->message == WM_KEYUP){
 		// codes ...
 	}
-  return CDialogEx::PreTranslateMessage(pMsg);
+	return CDialogEx::PreTranslateMessage(pMsg);
 }
 ```  
 
@@ -258,7 +258,7 @@ BOOL CCommand_CenterDlg::PreTranslateMessage(MSG* pMsg)
 ``` c++
 void CCommand_CenterDlg::DriveCommand(char dir)
 {
-  // codes ...
+	// codes ...
 	CreateCheckSum_PC2MCU();
 	pListenSocket->BroadCast(&pc2mcu, sizeof(pc2mcu));
 }
