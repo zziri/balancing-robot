@@ -233,7 +233,23 @@ void Tuning(void)
 ``` c++
 BOOL CCommand_CenterDlg::PreTranslateMessage(MSG* pMsg)
 {
-
+  if(pMsg->message == WM_KEYDOWN){
+		if(!CheckDriveClicked()){
+			SetDriveClicked(WM_KEYDOWN);
+			switch (pMsg->wParam)
+			{
+			case VK_LEFT:
+				m_BtnL.SetCheck(true);
+				DriveCommand(LEFT);
+				break;
+			// codes ...
+			}
+		}
+	}
+	else if(pMsg->message == WM_KEYUP){
+		// codes ...
+	}
+  return CDialogEx::PreTranslateMessage(pMsg);
 }
 ```  
 
@@ -242,9 +258,7 @@ BOOL CCommand_CenterDlg::PreTranslateMessage(MSG* pMsg)
 ``` c++
 void CCommand_CenterDlg::DriveCommand(char dir)
 {
-	memset(&pc2mcu, 0, sizeof(pc2mcu));
-	pc2mcu.drive.dir = dir;
-	UpdateData(TRUE), pc2mcu.drive.speed = (short)((int)((long)m_speed_cmd));
+  // codes ...
 	CreateCheckSum_PC2MCU();
 	pListenSocket->BroadCast(&pc2mcu, sizeof(pc2mcu));
 }
@@ -256,8 +270,8 @@ void CCommand_CenterDlg::CreateCheckSum_PC2MCU(void)
 	char* ptr = (char*)(&pc2mcu);
 	int temp = (int)NULL;
 	for(int i=1; i<sizeof(pc2mcu); i++){
-		temp += ptr[i];								/* 모두 더하기 */
-		temp &= 0x000000FF;							/* 8비트만 마스킹 */
+		temp += ptr[i];
+		temp &= 0x000000FF;
 	}
 	pc2mcu.checksum = (char)temp;
 }
