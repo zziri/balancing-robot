@@ -43,15 +43,15 @@
 
 #### I/O Board Circuit  
 
-* MCU, WizFi210(WiFi Module), MPU6050(IMU Sensor) and various connectors are connected  
+* MCU, WiFi Module, IMU Sensor를 비롯한 커넥터들이 연결됩니다  
 
 <img src="img/br_circuit_io_board.JPG" width="800">
 
-Left Header와 Right Header에 CN7, CN10(NUCLEO-F411RE Morpho headers)이 각각 연결되어 있습니다  
+Left Header와 Right Header에 CN7, CN10(NUCLEO-F411RE Morpho headers)이 각각 연결됩니다  
 
 #### Motor Driver Board  
 
-* DRV8825(Stepper Driver)를 비롯한 커넥터들이 연결되어 있습니다  
+* DRV8825(Stepper Driver)를 비롯한 커넥터들이 연결됩니다  
 
 <img src="img/br_circuit_motor_driver_board.JPG" width="800">
 <br>
