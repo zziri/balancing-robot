@@ -47,11 +47,11 @@
 
 <img src="img/br_circuit_io_board.JPG" width="800">
 
-Left Header and Right Header are connected to CN7 and CN10(NUCLEO-F411RE Morpho headers) respectively  
+Left Header와 Right Header에 CN7, CN10(NUCLEO-F411RE Morpho headers)이 각각 연결되어 있습니다  
 
 #### Motor Driver Board  
 
-* DRV8825(Stepper Driver) and various connectors are connected  
+* DRV8825(Stepper Driver)를 비롯한 커넥터들이 연결되어 있습니다  
 
 <img src="img/br_circuit_motor_driver_board.JPG" width="800">
 <br>
