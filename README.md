@@ -229,7 +229,7 @@ void Tuning(void)
 
 ### Driving  
 
-1. 키보드의 방향키를 누르면 `ControllerTuner` 그에 따른 이벤트를 처리합니다  
+1. 키보드의 방향키를 누르면 그에 따른 이벤트를 처리합니다  
 ``` c++
 BOOL CCommand_CenterDlg::PreTranslateMessage(MSG* pMsg)
 {
