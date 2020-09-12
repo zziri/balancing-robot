@@ -175,7 +175,7 @@ void GET_ANGLE(void)
 }
 ```
 
-# Controller Tuner  
+# Command Center  
 
 로봇의 상태를 모니터링하면서 제어기를 튜닝할 수 있는 윈도우 앱입니다  
 
@@ -185,7 +185,7 @@ void GET_ANGLE(void)
 
 ### Gain tuning  
 
-1. 로봇의 WiFi Module(WizFi210)과 `ControllerTuner` 간의 socket 통신으로 원격 튜닝을 구현합니다  
+1. 로봇의 WiFi Module(WizFi210)과 `Command Center` 간의 socket 통신으로 원격 튜닝을 구현합니다  
 1. 두 제어기(Block Diagram 참고)의 gain을 튜닝하기 위해서 Dialog로부터 입력되는 각 gain 값을 struct에 담아 BroadCast() 합니다  
 ``` c++
 typedef struct Gain
@@ -218,7 +218,7 @@ void CListenSocket::BroadCast(PC2MCU* pszBuffer, int len)
 	}
 }
 ```  
-3. WiFi Module은 `ControllerTuner`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
+3. WiFi Module은 `Command Center`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
 
 ``` c
 void Tuning(void)
