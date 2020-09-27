@@ -277,17 +277,6 @@ void CCommand_CenterDlg::CreateCheckSum_PC2MCU(void)
 }
 ```
 
-# 결과
-
-영상 테스트입니다
-
-.youtube{
-    width: 100%;
-    height: 100%;
-}
-
-<iframe class="youtube" width="1280" height="720" src="https://www.youtube.com/embed/fynvJweFX9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 # Reference  
 
