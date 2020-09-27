@@ -279,11 +279,9 @@ void CCommand_CenterDlg::CreateCheckSum_PC2MCU(void)
 
 # 결과
 
-<div class="row post-image-bg" markdown="1">
-    <video width="99%" height="540" autoplay loop muted markdown="1">
-        <source src="/video/BalancingRobot.mp4" type="video/mp4" markdown="1" >
-    </video>
-</div>
+영상 테스트입니다
+
+[![Video Label](http://img.youtube.com/vi/fynvJweFX9E/0.jpg)](https://www.youtube.com/watch?v=fynvJweFX9E)
 
 
 # Reference  
