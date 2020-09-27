@@ -279,7 +279,11 @@ void CCommand_CenterDlg::CreateCheckSum_PC2MCU(void)
 
 # 결과
 
-[![Balancing Robot](https://github.com/zziri/Balancing-Robot/tree/master/video.BalancingRobot.mp4)](https://github.com/zziri/Balancing-Robot/tree/master/video.BalancingRobot.mp4)
+<div class="row post-image-bg" markdown="1">
+    <video width="99%" height="540" autoplay loop muted markdown="1">
+        <source src="/video/BalancingRobot.mp4" type="video/mp4" markdown="1" >
+    </video>
+</div>
 
 
 # Reference  
