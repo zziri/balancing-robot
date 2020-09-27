@@ -281,7 +281,7 @@ void CCommand_CenterDlg::CreateCheckSum_PC2MCU(void)
 
 영상 테스트입니다
 
-[![Video Label](http://img.youtube.com/vi/fynvJweFX9E/0.jpg)](https://youtu.be/fynvJweFX9E?t=0s)
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/fynvJweFX9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 # Reference  
