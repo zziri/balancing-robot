@@ -192,7 +192,7 @@ typedef struct Gain
 {
 	// variables ...
 }Gain;
-```  
+```
 
 ``` c++
 void CCommand_CenterDlg::OnBnClickedButtonSend()
@@ -201,7 +201,7 @@ void CCommand_CenterDlg::OnBnClickedButtonSend()
 	pListenSocket->BroadCast(&pc2mcu, sizeof(pc2mcu));
 	// codes ...
 }
-```  
+```
 
 ``` c++
 void CListenSocket::BroadCast(PC2MCU* pszBuffer, int len)
@@ -217,7 +217,7 @@ void CListenSocket::BroadCast(PC2MCU* pszBuffer, int len)
 		pDlg->isCanSend = false;
 	}
 }
-```  
+```
 3. WiFi Module은 `Command Center`로부터 전송된 데이터에서 gain을 읽어 gain을 저장하는 변수를 setting 합니다  
 
 ``` c
@@ -225,7 +225,7 @@ void Tuning(void)
 {
 	// Gain 값 세팅
 }
-```  
+```
 
 ### Driving  
 
@@ -251,7 +251,7 @@ BOOL CCommand_CenterDlg::PreTranslateMessage(MSG* pMsg)
 	}
 	return CDialogEx::PreTranslateMessage(pMsg);
 }
-```  
+```
 
 2. 어떤 키가 눌렸는지 여부를 체크섬과 함께 로봇에 전송합니다  
 
@@ -262,7 +262,7 @@ void CCommand_CenterDlg::DriveCommand(char dir)
 	CreateCheckSum_PC2MCU();
 	pListenSocket->BroadCast(&pc2mcu, sizeof(pc2mcu));
 }
-```  
+```
 
 ``` c++
 void CCommand_CenterDlg::CreateCheckSum_PC2MCU(void)
@@ -275,9 +275,11 @@ void CCommand_CenterDlg::CreateCheckSum_PC2MCU(void)
 	}
 	pc2mcu.checksum = (char)temp;
 }
-```  
+```
 
+# 결과
 
+[![Balancing Robot](https://github.com/zziri/Balancing-Robot/tree/master/video.BalancingRobot.mp4)](https://github.com/zziri/Balancing-Robot/tree/master/video.BalancingRobot.mp4)
 
 
 # Reference  
