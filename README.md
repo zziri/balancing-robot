@@ -181,7 +181,7 @@ void GET_ANGLE(void)
 
 ![](img/Dialog_img.png)
 
-## 구현 방법  
+## 기능 구현
 
 ### Gain tuning  
 
